@@ -5,5 +5,5 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories { google(); mavenCentral() }
 }
-rootProject.name = "BubbleLadderTripleHedgeV32"
+rootProject.name = "BubbleLadderTripleHedgeV33"
 include(":app")
