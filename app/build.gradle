@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.bubbleladder.triplehedgev32'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.bubbleladder.triplehedgev32"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "3.2-rescue-ab"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    signingConfigs {
+        stable {
+            storeFile file("triplehedge-stable.jks")
+            storePassword "TripleHedge2026!"
+            keyAlias "triplehedge"
+            keyPassword "TripleHedge2026!"
+        }
+    }
+
+    buildTypes {
+        debug { signingConfig signingConfigs.stable }
+        release {
+            signingConfig signingConfigs.stable
+            minifyEnabled false
+        }
+    }
+}
